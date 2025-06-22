@@ -6,11 +6,35 @@ body {
 
 #top {
   background-color: #353535;
-  height: 100px;
+  height: 20px;
+  padding: 10px 20px;
+  text-align: right;
   box-shadow: 
     rgba(255, 255, 255, 0.05) 0px 50px 100px -20px,
     rgba(255, 255, 255, 0.08) 0px 30px 60px -30px,
     rgba(0, 0, 0, 0.4) 0px -2px 6px 0px inset;
+}
+
+.button {
+  border: none;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+.buttonOFF {
+  background-color: #dd0000;
+}
+
+.buttonON {
+  background-color: #00dd00;
+}
+
+.buttonText {
+  width: 90px;
+  color: #ffffff;
 }
 
 #main {
