@@ -4,7 +4,7 @@ const path = require('path');
 function createWindow() {
   const win = new BrowserWindow({
     width: 722,
-    height: 430,
+    height: 435,
     webPreferences: {
       preload: path.join(__dirname, 'src/renderer.js'),
       contextIsolation: false,
