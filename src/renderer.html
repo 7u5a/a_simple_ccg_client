@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Simple CasparCG Client</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="top"></div>
+  <div id="main">
+    <label>
+      CasparCG IP address:
+      <input id="ip" value="127.0.0.1">
+    </label>
+
+    <label>
+      CasparCG Port:
+      <input id="port" value="5250">
+    </label>
+    <button id="connect">Connect</button>
+
+    <br><br>
+
+    <label>
+      Write a CasparCG command (e.g. "PLAY 1-10 AMB LOOP"):
+    </label>
+    <br>
+    <input id="command">
+    <button id="send">Send</button>
+
+    <br><br>
+
+    <label>
+      CasparCG Status:
+    </label>
+    <textarea id="status" rows="10" cols="60" readonly></textarea>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

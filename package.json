@@ -1,0 +1,36 @@
+{
+  "name": "a_simple_ccg_client",
+  "version": "1.0.0",
+  "description": "A Simple CasparCG Client",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "Tue Sandbæk",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.5.0"
+  },
+  "build": {
+    "appId": "com.example.a_simple_ccg_client",
+    "productName": "A Simple CasparCG Client",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "src/**/*",
+      "assets/**/*"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
