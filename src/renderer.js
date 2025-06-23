@@ -3,8 +3,13 @@ const net = require('net');
 let client = null;
 let isConnected = false;
 
+const buttonON = document.querySelector('.buttonON');
+const buttonOFF = document.querySelector('.buttonOFF');
+const buttonText = document.querySelector('.buttonText');
 const connectBtn = document.getElementById('connect');
 const sendBtn = document.getElementById('send');
+
+updateConnectionStatus(false); // ← her
 
 connectBtn.addEventListener('click', () => {
   if (!isConnected) {
@@ -17,6 +22,7 @@ connectBtn.addEventListener('click', () => {
       logStatus(`Connected to ${ip}:${port}`);
       isConnected = true;
       connectBtn.textContent = 'Disconnect';
+      updateConnectionStatus(true); // ← her
     });
 
     client.on('data', data => {
@@ -28,10 +34,12 @@ connectBtn.addEventListener('click', () => {
       isConnected = false;
       connectBtn.textContent = 'Connect';
       client = null;
+      updateConnectionStatus(false); // ← her
     });
 
     client.on('error', err => {
       logStatus(`Error: ${err.message}`);
+      updateConnectionStatus(false); // ← her
     });
 
   } else {
@@ -42,6 +50,7 @@ connectBtn.addEventListener('click', () => {
     isConnected = false;
     connectBtn.textContent = 'Connect';
     client = null;
+    updateConnectionStatus(false); // ← her
   }
 });
 
@@ -59,4 +68,16 @@ function logStatus(message) {
   const status = document.getElementById('status');
   status.value += message + '\n';
   status.scrollTop = status.scrollHeight;
+}
+
+function updateConnectionStatus(connected) {
+  if (connected) {
+    buttonON.style.display = 'inline-block';
+    buttonOFF.style.display = 'none';
+    buttonText.textContent = 'Connected';
+  } else {
+    buttonON.style.display = 'none';
+    buttonOFF.style.display = 'inline-block';
+    buttonText.textContent = 'Disconnected';
+  }
 }
