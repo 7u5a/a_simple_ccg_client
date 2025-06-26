@@ -18,7 +18,7 @@ Et simpelt Electron-baseret CasparCG TCP kontrolværktøj. Appen tillader dig at
 1. **Klon projektet**
 
 ```bash
-git clone https://github.com/din-bruger/a_simple_ccg_client.git
+git clone https://github.com/7u5a/a_simple_ccg_client.git
 cd a_simple_ccg_client
 ```
 
