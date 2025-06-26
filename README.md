@@ -36,6 +36,6 @@ npm start
 
 Sørg for at Electron Builder er installeret globalt (eller via 'devDependencies').
 ```bash
-npm run build
+npm run dist
 ```
 Output findet i 'dist/'-mappen
