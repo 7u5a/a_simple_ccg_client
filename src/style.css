@@ -2,6 +2,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: small;
   margin: 0;
+  padding: 0;
 }
 
 #top {
@@ -41,15 +42,20 @@ body {
 #main {
   background-color: #aaaaaa;
   padding: 10px 20px;
+  margin: 0;
 }
 
 input {
   margin: 0 10px;
 }
 
+input#ip, input#port {
+  width: 130px;
+}
+
 input#command {
   margin: 10px 9px 0 0;
-  width: 575px;
+  width: 558px;
 }
 
 textarea {
